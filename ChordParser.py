@@ -16,13 +16,26 @@
 #   <note>      ::=  <natural> | <natural> <mod>
 #   <natural>   ::=  a | b | c | d | e | f | g
 #   <mod>       ::=  b | #
-#   <quality>   ::=  
+#   <quality>   ::=  <triad> | <seventh>
+#   <triad>     ::=  maj | M | Δ | ε |      (major triad)
+#                    m | - | min |          (minor triad)
+#                    + | aug | M#5 | M+5 |  (augmented triad)
+#                    o | dim | mb5 | mo5    (diminished triad)  
+# 
+#   <seventh>   ::=  7 | dom7 |             (dominant seventh)
+#                    M7 | maj7 | Δ7 |       (major seventh)
+#                    mM7 | m#7 | -M7 | -Δ7 | minmaj7 | min-maj7 | (minor-major seventh)
+#                    m7 | -7 | min7 |       (minor seventh)
+#                    +M7 | augmaj7 | aug-maj7 | M7#5 | M7+5 | Δ7#5 | Δ7+5 | (augmented-major seventh)
+#                    +7 | aug7 | 7#5 | 7+5 | (augmented seventh)
+#                    ø | ø7 | min7dim5 | m7b5 | m7o5 | -7b5 | -7o5 | (half-diminished seventh)
+#                    o7 | dim7 |            (diminished seventh)
+#                    7b5 | 7dim5            (seventh flat five)
 
 # --------------------------------
-#   CHAR LISTS / DICTIONARIES
+#   TOKENS / DICTIONARIES
 # --------------------------------
-whitespace = ' \n\t\r\v\f'
-valid_chars = "abcdefgb#0123456789/majmindimaugsus"
+valid_chars = "AaBbCcDdEeFfGg0123456789#bmajminaugdimΔ-+oMø"
 
 notes = { 
     'c':        0,
@@ -38,8 +51,40 @@ notes = {
     'a#/bb':    10,
     'b':        11 
     }
+triad_tokens = {
+    'maj':      12,
+    'min':      13,
+    'aug':      14,
+    'dim':      15
+}
+seventh_tokens = {
+    'dom7':     16,
+    'maj7':     17,
+    'min-maj7': 18,
+    'min7':     19,
+    'aug-maj7': 20,
+    'aug7':     21,
+    'halfdim7': 22,
+    'dim7':     23,
+    '7b5':      24
+}
 natural_chars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g' }
 mod_chars = { '#', 'b' }
+
+major_triad_id = { 'maj', 'M', 'Δ' }
+minor_triad_id = { 'm', '-', 'min' }
+aug_triad_id = { '+', 'aug', 'M#5', 'M+5' }
+dim_triad_id = { 'o', 'dim', 'mb5', 'mo5' }
+
+#   <seventh>   ::=  7 | dom7 |             (dominant seventh)
+#                    M7 | maj7 | Δ7 |       (major seventh)
+#                    mM7 | m#7 | -M7 | -Δ7 | minmaj7 | min-maj7 | (minor-major seventh)
+#                    m7 | -7 | min7 |       (minor seventh)
+#                    +M7 | augmaj7 | aug-maj7 | M7#5 | M7+5 | Δ7#5 | Δ7+5 | (augmented-major seventh)
+#                    +7 | aug7 | 7#5 | 7+5 | (augmented seventh)
+#                    ø | ø7 | min7dim5 | m7b5 | m7o5 | -7b5 | -7o5 | (half-diminished seventh)
+#                    o7 | dim7 |            (diminished seventh)
+#                    7b5 | 7dim5            (seventh flat five)
 
 
 # --------------------------------
@@ -73,6 +118,7 @@ class ChordParser:
         # root note of the chord
         self.note()
         # quality of the chord
+        self.quality()
 
         print (self.stack)
 
@@ -109,22 +155,46 @@ class ChordParser:
                 num -= 1
                 self.stack.append(num)
 
+    def quality(self):
+        # check for triad ids
+        self.triad()
+
+    def triad(self):
+        # check for each type of triad
+        # major triad
+        for n in major_triad_id:
+            if (self.look_ahead(n)):
+                self.pos += len(n)
+                self.stack.append(triad_tokens.get('maj'))
+                return
+        # minor triad
+        for n in minor_triad_id:
+            if (self.look_ahead(n)):
+                self.pos += len(n)
+                self.stack.append(triad_tokens.get('min'))
+                return
+        # augmented triad
+        for n in aug_triad_id:
+            if (self.look_ahead(n)):
+                self.pos += len(n)
+                self.stack.append(triad_tokens.get('aug'))
+                return
+        # diminished triad
+        for n in dim_triad_id:
+            if (self.look_ahead(n)):
+                self.pos += len(n)
+                self.stack.append(triad_tokens.get('dim'))
+                return
+
+    def seventh(self):
+        pass
 
     def number_to_note(self, num):
         for key, value in notes.items():
             if (value == num):
                 return key        
 
-
-    def ignore_whitespace(self):
-        # skip any whitespace chars
-        while (self.pos < self.length and self.text[self.pos] in whitespace):
-            self.pos += 1
-        return
-
     def get_next_char(self):
-        # ignore any whitespace
-        self.ignore_whitespace()
         # make sure pos is not out of bounds
         if (self.pos >= self.length):
             return
@@ -135,5 +205,13 @@ class ChordParser:
         # return char
         self.pos += 1
         return char
+
+    def look_ahead(self, value):
+        # get the substring from pos to end
+        sub_str = self.text[self.pos - 1:]
+        # print ("sub_str: %s value: %s" % (sub_str, value))
+        if (value in sub_str):
+            return True
+        return False
 
 

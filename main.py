@@ -10,7 +10,7 @@ def main():
     print ("\nThis program parses chord names and denotes how to costruct it. Type \'exit\' to end the program.\n")
     while (True):
         user_input = input("Enter a chord: ")
-        user_input = user_input.lower() # convert to lowercase to make parsing easier
+        user_input = user_input.replace(' ', '') # remove all spaces
 
         if (user_input == "exit"):
             break
