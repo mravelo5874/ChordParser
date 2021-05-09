@@ -8,12 +8,6 @@
 #   - https://www.stringkick.com/blog-lessons/chord-names-symbols/
 
 # --------------------------------
-#   CHAR LIST
-# --------------------------------
-whitespace = ' \n\t\r\v\f'
-valid_chars = "abcdefgb#0123456789/majmindimaugsus"
-
-# --------------------------------
 #   BNF GRAMMAR
 # --------------------------------
 
@@ -21,6 +15,14 @@ valid_chars = "abcdefgb#0123456789/majmindimaugsus"
 #   <note>      ::=  <natural> | <natural> <mod>
 #   <natural>   ::=  a | b | c | d | e | f | g
 #   <mod>       ::=  b | #
+
+# --------------------------------
+#   CHAR LIST
+# --------------------------------
+whitespace = ' \n\t\r\v\f'
+valid_chars = "abcdefgb#0123456789/majmindimaugsus"
+
+
 
 # --------------------------------
 #   ERROR CLASS
