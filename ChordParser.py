@@ -101,10 +101,25 @@ seventh_delimiters = ' /'
 #   CHORD INTERVALS (SEMITONES)
 # --------------------------------
 
-major_triad_ints = [ 0, 4, 7 ] # R 3 5
-minor_triad_ints = [ 0, 3, 7 ] # R b3 5
-dim_triad_ints = [ 0, 3, 6 ] # R b3 b5
-aug_triad_ints = [ 0, 4, 8 ] # R 3 #5
+chord_intervals = {
+    # triads
+    12: [ 0, 4, 7 ], # R 3 5    (major triad)
+    13: [ 0, 3, 7 ], # R b3 5   (minor triad)
+    14: [ 0, 3, 6 ], # R b3 b5  (augmented triad)
+    15: [ 0, 4, 8 ], # R 3 #5   (diminished triad)
+    # sevenths
+    16: [ 0, 4, 7, 10 ], # R 3 5 b7     (dominant seventh)
+    17: [ 0, 4, 6, 10 ], # R 3 b5 b7    (dominant seventh flat five)
+    18: [ 0, 4, 7, 11 ], # R 3 5 7      (major seventh)
+    19: [ 0, 4, 6, 11 ], # R 3 b5 7     (major seventh flat five)
+    20: [ 0, 3, 7, 11 ], # R b3 5 7     (minor major seventh)
+    21: [ 0, 3, 7, 10 ], # R b3 5 b7    (minor seventh)
+    22: [ 0, 4, 8, 11 ], # R 3 ♯5 7     (augmented major seventh)
+    23: [ 0, 4, 8, 10 ], # R 3 ♯5 b7    (augmented seventh)
+    24: [ 0, 3, 6, 10 ], # R b3 b5 b7   (half-diminished seventh)
+    25: [ 0, 3, 6,  9 ], # R b3 b5 bb7  (diminished seventh)
+    26: [ 0, 3, 6, 11 ], # R b3 b5 7    (diminished major seventh)
+}
 
 # --------------------------------
 #   ERROR CLASS
@@ -313,7 +328,7 @@ class ChordParser:
 
     def number_to_note(self, num):
         if (num < 0 or num > 11):
-            return
+            return None
         for key, value in notes.items():
             if (value == num):
                 return key
@@ -357,12 +372,23 @@ class ChordParser:
         return False
 
     def print_chord(self, stack):
+        # translate stack
         root, quality, bass = self.translate_stack(stack)
 
         if (bass != None):
-            print ("chord parsed: %s %s / %s" % (root, quality, bass))
+            print ("chord: %s %s / %s" % (root, quality, bass))
         else:
-            print ("chord parsed: %s %s" % (root, quality))
+            print ("chord: %s %s" % (root, quality))
+    
+    def print_notes(self, stack):
+        res = ''
+        # loop through notes
+        for note in stack:
+            n = self.number_to_note(note)
+            res += n
+            res += ' '
+
+        print ('notes: %s' % res)
 
     def translate_stack(self, stack):
         # get the root of the chord
@@ -374,11 +400,43 @@ class ChordParser:
         bass = None
         # get slash bass note (optional)
         if (len(stack) > 0):
-            print ("bass!")
             bass = self.number_to_note(stack.pop(0))
+        
+        return root, quality, bass
+
+    def separate_stack(self, stack):
+        # get the root of the chord
+        root = stack.pop(0)
+        
+        # get the quality of the chord
+        quality = stack.pop(0)
+
+        bass = None
+        # get slash bass note (optional)
+        if (len(stack) > 0):
+            bass = stack.pop(0)
         
         return root, quality, bass
         
 
     def stack_to_notes(self, stack):
-        pass
+        # translate stack
+        root, quality, bass = self.separate_stack(stack)
+        chord_stack = []
+
+        # add bass note
+        if (bass != None):
+            chord_stack.append(bass)
+
+        # get chord intervals from root
+        intervals = chord_intervals.get(quality)
+
+        # get each note
+        for i in intervals:
+            note = root + i
+            if note > 11:
+                note -= 11
+            chord_stack.append(note)
+        
+        return chord_stack
+        

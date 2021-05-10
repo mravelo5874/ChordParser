@@ -26,9 +26,14 @@ def main():
         # send user input to the parser class
         parser = ChordParser()
         result = parser.parse(user_input)
+        notes = parser.stack_to_notes(result.copy())
+        
 
         # print out result
-        parser.print_chord(result)
+        print ('--------------------------------')
+        parser.print_chord(result.copy())
+        parser.print_notes(notes.copy())
+        print ('--------------------------------')
 
     # end program
     print ("ending program...")
