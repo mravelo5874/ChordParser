@@ -81,7 +81,7 @@ aug_triad_id = { '+', 'aug', 'M#5', 'M+5' }
 dim_triad_id = { 'o', 'dim', 'mb5', 'mo5' }
 
 dom_seventh_id = { '7', 'dom7' }
-dom_seventh_b5_id = { 'f7b5', '7dim5' }
+dom_seventh_b5_id = { '7b5', '7dim5' }
 major_seventh_id = { 'M7', 'maj7', 'Δ7' }
 major_seventh_b5_id = { 'M7b5', 'Δ7b5' }
 minor_major_seventh_id = { 'mM7', 'm#7', '-M7', '-Δ7', 'minmaj7', 'min-maj7' }
@@ -91,6 +91,8 @@ aug_seventh_id = { '+7', 'aug7', '7#5', '7+5' }
 half_dim_seventh_id = { 'ø', 'ø7', 'min7dim5', 'm7b5', 'm7o5', '-7b5', '-7o5' }
 dim_seventh_id = { 'o7', 'dim7' }
 dim_major_seventh_id = { 'mM7b5', '-Δ7b5', 'oM7' }
+
+seventh_delimiters = {' /'}
 
 # --------------------------------
 #   ERROR CLASS
@@ -178,9 +180,9 @@ class ChordParser:
 
     def quality(self):
         # check for seventh ids
-        self.seventh()
-        # check for triad ids
-        self.triad()
+        if not self.seventh():
+            # check for triad ids
+            self.triad()
 
     def slash(self):
         char = self.get_next_char()
@@ -197,96 +199,98 @@ class ChordParser:
             if (self.next_up(n)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('aug'))
-                return
+                return True
         # diminished triad
         for n in dim_triad_id:
             if (self.next_up(n)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dim'))
-                return
+                return True
         # major triad
         for n in major_triad_id:
             if (self.next_up(n)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('maj'))
-                return
+                return True
         # minor triad
         for n in minor_triad_id:
             if (self.next_up(n)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('min'))
-                return
+                return True
         # if no quality symbol is given, chord is major by default
         self.stack.append(quality_tokens.get('maj'))
+        return True
 
     def seventh(self):
         # check for each type of seventh
         # dominant seventh
         for n in dom_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dom7'))
-                return
+                return True
         # dominant seventh flat five
         for n in dom_seventh_b5_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dom7b5'))
-                return
+                return True
         # major seventh
         for n in major_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('maj7'))
-                return
+                return True
         # major seventh flat five
         for n in major_seventh_b5_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('maj7b5'))
-                return
+                return True
         # minor-major seventh
         for n in minor_major_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('min-maj7'))
-                return
+                return True
         # minor seventh
         for n in minor_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('min7'))
-                return
+                return True
         # augmented-major seventh
         for n in aug_major_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('aug-maj7'))
-                return
+                return True
         # augmented seventh
         for n in aug_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('aug7'))
-                return
+                return True
         # half-diminished seventh
         for n in half_dim_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('halfdim7'))
-                return
+                return True
         # diminished seventh
         for n in dim_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dim7'))
-                return
+                return True
         # diminished major seventh
         for n in dim_major_seventh_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, seventh_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dim-maj7'))
-                return
+                return True
+        return False # no seventh quality found
     
     # --------------------------------
     #   UTILITY FUNCTIONS
@@ -323,12 +327,17 @@ class ChordParser:
         self.validated = False
         return char
 
-    def next_up(self, value):
+    def next_up(self, value, delimiters = ['']):
         # get the substring from pos to end
         sub_str = self.text[self.pos - 1:]
         # print ("sub_str: %s value: %s" % (sub_str, value))
         if (sub_str.startswith(value, 0)):
-            return True
+            after_next = sub_str[len(value):]
+            #print ("after_next: " + after_next)
+            if (len(after_next) == 0):
+                return True
+            if (after_next[0] in delimiters):
+                return True
         return False
 
     
