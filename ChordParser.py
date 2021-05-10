@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import sys
+
 # --------------------------------
 #   RESOURCES
 # --------------------------------
@@ -92,7 +94,17 @@ half_dim_seventh_id = { 'ø', 'ø7', 'min7dim5', 'm7b5', 'm7o5', '-7b5', '-7o5' 
 dim_seventh_id = { 'o7', 'dim7' }
 dim_major_seventh_id = { 'mM7b5', '-Δ7b5', 'oM7' }
 
-seventh_delimiters = {' /'}
+triad_delimiters = ' /'
+seventh_delimiters = ' /'
+
+# --------------------------------
+#   CHORD INTERVALS (SEMITONES)
+# --------------------------------
+
+major_triad_ints = [ 0, 4, 7 ] # R 3 5
+minor_triad_ints = [ 0, 3, 7 ] # R b3 5
+dim_triad_ints = [ 0, 3, 6 ] # R b3 b5
+aug_triad_ints = [ 0, 4, 8 ] # R 3 #5
 
 # --------------------------------
 #   ERROR CLASS
@@ -120,10 +132,11 @@ class ChordParser:
 
         try:
             self.chord()
+            return self.stack
         except ParseError as error:
             print(error)
-
-        return self.stack
+            sys.exit(1)
+            
 
     # --------------------------------
     #   GRAMMAR FUNCTIONS
@@ -164,7 +177,6 @@ class ChordParser:
                     raise ParseError(self.pos, "SYNTAX", "\'%s#\' is not a vaild note" % self.number_to_note(num))
                 # increament note index by 1 to get respective #
                 num += 1
-                self.pos += 1
                 self.stack.append(num)
                 self.validated = True
             elif (char == 'b'):
@@ -174,9 +186,11 @@ class ChordParser:
                     raise ParseError(self.pos, "SYNTAX", "\'%sb\' is not a vaild note" % self.number_to_note(num))
                 # decrement note index by 1 to get respective #
                 num -= 1
-                self.pos += 1
                 self.stack.append(num)
                 self.validated = True
+        else:
+            self.validated = True
+            self.pos -= 1
 
     def quality(self):
         # check for seventh ids
@@ -186,6 +200,7 @@ class ChordParser:
 
     def slash(self):
         char = self.get_next_char()
+        #print (char)
         if (char == '/'):
             self.validated = True
             # get the bass note
@@ -196,25 +211,25 @@ class ChordParser:
         # check for each type of triad
         # augmented triad
         for n in aug_triad_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, triad_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('aug'))
                 return True
         # diminished triad
         for n in dim_triad_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, triad_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('dim'))
                 return True
         # major triad
         for n in major_triad_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, triad_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('maj'))
                 return True
         # minor triad
         for n in minor_triad_id:
-            if (self.next_up(n)):
+            if (self.next_up(n, triad_delimiters)):
                 self.pos += len(n)
                 self.stack.append(quality_tokens.get('min'))
                 return True
@@ -329,18 +344,25 @@ class ChordParser:
 
     def next_up(self, value, delimiters = ['']):
         # get the substring from pos to end
-        sub_str = self.text[self.pos - 1:]
-        # print ("sub_str: %s value: %s" % (sub_str, value))
+        sub_str = self.text[self.pos:]
+        #print ("sub_str: %s value: %s delim: %s" % (sub_str, value, delimiters))
         if (sub_str.startswith(value, 0)):
             after_next = sub_str[len(value):]
             #print ("after_next: " + after_next)
             if (len(after_next) == 0):
                 return True
-            if (after_next[0] in delimiters):
+            next_char = after_next[0]
+            if (next_char in delimiters):
                 return True
         return False
 
-    
+    def print_chord(self, stack):
+        root, quality, bass = self.translate_stack(stack)
+
+        if (bass != None):
+            print ("chord parsed: %s %s / %s" % (root, quality, bass))
+        else:
+            print ("chord parsed: %s %s" % (root, quality))
 
     def translate_stack(self, stack):
         # get the root of the chord
@@ -349,9 +371,14 @@ class ChordParser:
         # get the quality of the chord
         quality = self.number_to_quality(stack.pop(0))
 
+        bass = None
         # get slash bass note (optional)
-        if (len(stack) != 0):
+        if (len(stack) > 0):
+            print ("bass!")
             bass = self.number_to_note(stack.pop(0))
-            print ("chord parsed: %s %s / %s" % (root, quality, bass))
-        else:
-            print ("chord parsed: %s %s" % (root, quality))
+        
+        return root, quality, bass
+        
+
+    def stack_to_notes(self, stack):
+        pass

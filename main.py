@@ -16,7 +16,7 @@ def main():
     # accept user input until user quits program
     print ("\nThis program parses chord names and denotes how to costruct it. Type \'exit\' to end the program.\n")
     while (True):
-        user_input = input("Enter a chord: ")
+        user_input = input("\nEnter a chord: ")
         user_input = user_input.replace(' ', '') # remove all spaces
         print('') # print extra line
 
@@ -28,7 +28,7 @@ def main():
         result = parser.parse(user_input)
 
         # print out result
-        parser.translate_stack(result)
+        parser.print_chord(result)
 
     # end program
     print ("ending program...")
