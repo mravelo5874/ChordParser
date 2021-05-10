@@ -10,6 +10,7 @@ def main():
     if ('-test' in sys.argv):
         tester = ParserTester()
         tester.begin_tests()
+        print ("ending program...")
         sys.exit(0)
 
     # accept user input until user quits program
