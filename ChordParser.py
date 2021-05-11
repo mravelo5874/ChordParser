@@ -435,7 +435,7 @@ class ChordParser:
         for i in intervals:
             note = root + i
             if note > 11:
-                note -= 11
+                note -= 12
             chord_stack.append(note)
         
         return chord_stack

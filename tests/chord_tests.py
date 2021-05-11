@@ -72,8 +72,8 @@ chord_tests = {
     'C-7b5':    [ 0, 3, 6, 10 ],
     'C-7o5':    [ 0, 3, 6, 10 ],
     # C diminished seventh
-    'Co7':      [ 0, 3, 6, 10 ],
-    'Cdim7':    [ 0, 3, 6, 10 ],
+    'Co7':      [ 0, 3, 6,  9 ],
+    'Cdim7':    [ 0, 3, 6,  9 ],
     # C diminished major seventh
     'CmM7b5':   [ 0, 3, 6, 11 ],
     'C-Δ7b5':   [ 0, 3, 6, 11 ],
