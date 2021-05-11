@@ -8,11 +8,13 @@ chord_tests = {
 #   C CHORDS
 # --------------------------------
     # C major
-    'C':        [0, 4, 7],
+    'C':        [0, 4, 7], 
+    'Cmajor':   [0, 4, 7],
     'Cmaj':     [0, 4, 7],
     'CM':       [0, 4, 7],
     'CΔ':       [0, 4, 7],
     # C minor
+    'Cminor':   [0, 3, 7],
     'Cm':       [0, 3, 7],
     'C-':       [0, 3, 7],
     'Cmin':     [0, 3, 7],
@@ -28,10 +30,11 @@ chord_tests = {
     'Cmo5':     [0, 4, 8],
     # C dominant seventh
     'C7':       [ 0, 4, 7, 10 ],
+    'Cdom':     [ 0, 4, 7, 10 ],
     'Cdom7':    [ 0, 4, 7, 10 ],
+    'C7dim5':   [ 0, 4, 7, 10 ],
     # C dominant seventh flat five
     'C7b5':     [ 0, 4, 6, 10 ],
-    'C7dim5':   [ 0, 4, 6, 10 ],
     # C major seventh
     'CM7':      [ 0, 4, 7, 11 ],
     'Cmaj7':    [ 0, 4, 7, 11 ],

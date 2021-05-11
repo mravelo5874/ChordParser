@@ -19,12 +19,12 @@ import sys
 #   <natural>   ::=  a | b | c | d | e | f | g
 #   <mod>       ::=  b | #
 #   <quality>   ::=  <triad> | <seventh>
-#   <triad>     ::=  maj | M | Δ | ε |      (major triad)
-#                    m | - | min |          (minor triad)
+#   <triad>     ::=  major | maj | M | Δ | ε |      (major triad)
+#                    minor | m | - | min |          (minor triad)
 #                    + | aug | M#5 | M+5 |  (augmented triad)
 #                    o | dim | mb5 | mo5    (diminished triad)  
 # 
-#   <seventh>   ::=  7 | dom7 |             (dominant seventh)
+#   <seventh>   ::=  7 | dom | dom7 |             (dominant seventh)
 #                    7b5 | 7dim5            (dominant seventh flat five)
 #                    M7 | maj7 | Δ7 |       (major seventh)
 #                    M7b5 | Δ7b5            (major seventh flat five)
@@ -77,13 +77,13 @@ quality_tokens = {
 natural_chars = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' }
 mod_chars = { '#', 'b' }
 
-major_triad_id = { 'maj', 'M', 'Δ' }
-minor_triad_id = { 'm', '-', 'min' }
+major_triad_id = { 'major', 'maj', 'M', 'Δ' }
+minor_triad_id = { 'minor', 'm', '-', 'min' }
 aug_triad_id = { '+', 'aug', 'M#5', 'M+5' }
 dim_triad_id = { 'o', 'dim', 'mb5', 'mo5' }
 
-dom_seventh_id = { '7', 'dom7' }
-dom_seventh_b5_id = { '7b5', '7dim5' }
+dom_seventh_id = { '7', 'dom', 'dom7', '7dim5' }
+dom_seventh_b5_id = { '7b5' }
 major_seventh_id = { 'M7', 'maj7', 'Δ7' }
 major_seventh_b5_id = { 'M7b5', 'Δ7b5' }
 minor_major_seventh_id = { 'mM7', 'm#7', '-M7', '-Δ7', 'minmaj7', 'min-maj7' }

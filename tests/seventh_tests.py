@@ -10,10 +10,11 @@ seventh_tests = {
     # C dominant seventh
     'C7':       [0, 16],
     'Cdom7':    [0, 16],
+    'Cdom':     [0, 16],
+    'C7dim5':   [0, 16],
 
     # C dominant flat seventh
     'C7b5':     [0, 17],
-    'C7dim5':   [0, 17],
 
     # C major seventh
     'CM7':      [0, 18],
@@ -75,10 +76,11 @@ seventh_tests = {
     # C# dominant seventh
     'C#7':       [1, 16],
     'C#dom7':    [1, 16],
+    'C#dom':     [1, 16],
+    'C#7dim5':   [1, 16],
 
     # C# dominant flat seventh
     'C#7b5':     [1, 17],
-    'C#7dim5':   [1, 17],
 
     # C# major seventh
     'C#M7':      [1, 18],
@@ -140,10 +142,11 @@ seventh_tests = {
     # Db dominant seventh
     'Db7':       [1, 16],
     'Dbdom7':    [1, 16],
+    'Dbdom':     [1, 16],
+    'Db7dim5':   [1, 16],
 
     # Db dominant flat seventh
     'Db7b5':     [1, 17],
-    'Db7dim5':   [1, 17],
 
     # Db major seventh
     'DbM7':      [1, 18],
@@ -205,10 +208,11 @@ seventh_tests = {
     # D dominant seventh
     'D7':       [2, 16],
     'Ddom7':    [2, 16],
+    'Ddom':     [2, 16],
+    'D7dim5':   [2, 16],
 
     # D dominant flat seventh
     'D7b5':     [2, 17],
-    'D7dim5':   [2, 17],
 
     # D major seventh
     'DM7':      [2, 18],
@@ -270,10 +274,11 @@ seventh_tests = {
     # D# dominant seventh
     'D#7':       [3, 16],
     'D#dom7':    [3, 16],
+    'D#dom':     [3, 16],
+    'D#7dim5':   [3, 16],
 
     # D# dominant flat seventh
     'D#7b5':     [3, 17],
-    'D#7dim5':   [3, 17],
 
     # D# major seventh
     'D#M7':      [3, 18],
@@ -335,10 +340,11 @@ seventh_tests = {
     # Eb dominant seventh
     'Eb7':       [3, 16],
     'Ebdom7':    [3, 16],
+    'Ebdom':     [3, 16],
+    'Eb7dim5':   [3, 16],
 
     # Eb dominant flat seventh
     'Eb7b5':     [3, 17],
-    'Eb7dim5':   [3, 17],
 
     # Eb major seventh
     'EbM7':      [3, 18],
@@ -400,10 +406,11 @@ seventh_tests = {
     # E dominant seventh
     'E7':       [4, 16],
     'Edom7':    [4, 16],
+    'Edom':     [4, 16],
+    'E7dim5':   [4, 16],
 
     # E dominant flat seventh
     'E7b5':     [4, 17],
-    'E7dim5':   [4, 17],
 
     # E major seventh
     'EM7':      [4, 18],
@@ -465,10 +472,11 @@ seventh_tests = {
     # F dominant seventh
     'F7':       [5, 16],
     'Fdom7':    [5, 16],
+    'Fdom':     [5, 16],
+    'F7dim5':   [5, 16],
 
     # F dominant flat seventh
     'F7b5':     [5, 17],
-    'F7dim5':   [5, 17],
 
     # F major seventh
     'FM7':      [5, 18],
@@ -530,10 +538,11 @@ seventh_tests = {
     # F# dominant seventh
     'F#7':       [6, 16],
     'F#dom7':    [6, 16],
+    'F#dom':     [6, 16],
+    'F#7dim5':   [6, 16],
 
     # F# dominant flat seventh
     'F#7b5':     [6, 17],
-    'F#7dim5':   [6, 17],
 
     # F# major seventh
     'F#M7':      [6, 18],
@@ -595,10 +604,11 @@ seventh_tests = {
     # Gb dominant seventh
     'Gb7':       [6, 16],
     'Gbdom7':    [6, 16],
+    'Gbdom':     [6, 16],
+    'Gb7dim5':   [6, 16],
 
     # Gb dominant flat seventh
     'Gb7b5':     [6, 17],
-    'Gb7dim5':   [6, 17],
 
     # Gb major seventh
     'GbM7':      [6, 18],
@@ -660,10 +670,11 @@ seventh_tests = {
     # G dominant seventh
     'G7':       [7, 16],
     'Gdom7':    [7, 16],
+    'Gdom':     [7, 16],
+    'G7dim5':   [7, 16],
 
     # G dominant flat seventh
     'G7b5':     [7, 17],
-    'G7dim5':   [7, 17],
 
     # G major seventh
     'GM7':      [7, 18],
@@ -725,10 +736,11 @@ seventh_tests = {
     # G# dominant seventh
     'G#7':       [8, 16],
     'G#dom7':    [8, 16],
+    'G#dom':     [8, 16],
+    'G#7dim5':   [8, 16],
 
     # G# dominant flat seventh
     'G#7b5':     [8, 17],
-    'G#7dim5':   [8, 17],
 
     # G# major seventh
     'G#M7':      [8, 18],
@@ -790,10 +802,11 @@ seventh_tests = {
     # Ab dominant seventh
     'Ab7':       [8, 16],
     'Abdom7':    [8, 16],
+    'Abdom':     [8, 16],
+    'Ab7dim5':   [8, 16],
 
     # Ab dominant flat seventh
     'Ab7b5':     [8, 17],
-    'Ab7dim5':   [8, 17],
 
     # Ab major seventh
     'AbM7':      [8, 18],
@@ -855,10 +868,11 @@ seventh_tests = {
     # A dominant seventh
     'A7':       [9, 16],
     'Adom7':    [9, 16],
+    'Adom':     [9, 16],
+    'A7dim5':   [9, 16],
 
     # A dominant flat seventh
     'A7b5':     [9, 17],
-    'A7dim5':   [9, 17],
 
     # A major seventh
     'AM7':      [9, 18],
@@ -920,10 +934,11 @@ seventh_tests = {
     # A# dominant seventh
     'A#7':       [10, 16],
     'A#dom7':    [10, 16],
+    'A#dom':     [10, 16],
+    'A#7dim5':   [10, 16],
 
     # A# dominant flat seventh
     'A#7b5':     [10, 17],
-    'A#7dim5':   [10, 17],
 
     # A# major seventh
     'A#M7':      [10, 18],
@@ -985,10 +1000,11 @@ seventh_tests = {
     # Bb dominant seventh
     'Bb7':       [10, 16],
     'Bbdom7':    [10, 16],
+    'Bbdom':     [10, 16],
+    'Bb7dim5':   [10, 16],
 
     # Bb dominant flat seventh
     'Bb7b5':     [10, 17],
-    'Bb7dim5':   [10, 17],
 
     # Bb major seventh
     'BbM7':      [10, 18],
@@ -1050,10 +1066,11 @@ seventh_tests = {
     # B dominant seventh
     'B7':       [11, 16],
     'Bdom7':    [11, 16],
+    'Bdom':     [11, 16],
+    'B7dim5':   [11, 16],
 
     # B dominant flat seventh
     'B7b5':     [11, 17],
-    'B7dim5':   [11, 17],
 
     # B major seventh
     'BM7':      [11, 18],
