@@ -22,7 +22,8 @@ import sys
 #   <triad>     ::=  major | maj | M | Δ | ε |      (major triad)
 #                    minor | m | - | min |          (minor triad)
 #                    + | aug | M#5 | M+5 |  (augmented triad)
-#                    o | dim | mb5 | mo5    (diminished triad)  
+#                    o | dim | mb5 | mo5    (diminished triad)
+
 # 
 #   <seventh>   ::=  7 | dom | dom7 |             (dominant seventh)
 #                    7b5 | 7dim5            (dominant seventh flat five)
@@ -39,7 +40,7 @@ import sys
 # --------------------------------
 #   TOKENS / DICTIONARIES
 # --------------------------------
-valid_chars = "AaBbCcDdEeFfGg0123456789#bmajminaugdimΔ-+oMø/"
+valid_chars = "AaBbCcDdEeFfGg0123456789#bmajminaugdimΔ-+oMø/" # ♮ ??
 
 notes = { 
     'C':        0,
@@ -76,17 +77,20 @@ quality_tokens = {
 }
 natural_chars = { 'A', 'B', 'C', 'D', 'E', 'F', 'G' }
 mod_chars = { '#', 'b' }
-
+# triads
 major_triad_id = { 'major', 'maj', 'M', 'Δ' }
 minor_triad_id = { 'minor', 'm', '-', 'min' }
 aug_triad_id = { '+', 'aug', 'M#5', 'M+5' }
 dim_triad_id = { 'o', 'dim', 'mb5', 'mo5' }
-
+# sevenths
 dom_seventh_id = { '7', 'dom', 'dom7', '7dim5' }
-dom_seventh_b5_id = { '7b5' }
-major_seventh_id = { 'M7', 'maj7', 'Δ7' }
-major_seventh_b5_id = { 'M7b5', 'Δ7b5' }
-minor_major_seventh_id = { 'mM7', 'm#7', '-M7', '-Δ7', 'minmaj7', 'min-maj7' }
+dom_seventh_b5_id = { '7b5', '7-5', 'dom7b5', 'dom7-5' }
+major_seventh_id = { 'M7', 'maj7', 'Δ7', 'major7' }
+major_seventh_b5_id = { 'M7b5', 'Δ7b5', 'maj7b5', 'major7b5', 'M7-5', 'Δ7-5', 'maj7-5', 'major7-5', }
+minor_major_seventh_id = { 'minormajor7', 'minormaj7', 'minorM7', 'minorΔ7',
+                           'mmajor7', 'mmaj7', 'mM7', 'mΔ7',
+                           '-major7', '-maj7', '-M7', '-Δ7',
+                           'minmajor7', 'minmaj7', 'minM7', 'minΔ7' }
 minor_seventh_id = { 'm7', '-7', 'min7' }
 aug_major_seventh_id= { '+M7', 'augmaj7', 'aug-maj7', 'M7#5', 'M7+5', 'Δ7#5', 'Δ7+5' }
 aug_seventh_id = { '+7', 'aug7', '7#5', '7+5' }

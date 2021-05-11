@@ -15,23 +15,43 @@ seventh_tests = {
 
     # C dominant flat seventh
     'C7b5':     [0, 17],
+    'C7-5':     [0, 17],
+    'Cdom7b5':  [0, 17],
+    'Cdom7-5':  [0, 17],
 
     # C major seventh
     'CM7':      [0, 18],
     'Cmaj7':    [0, 18],
     'CΔ7':      [0, 18],
+    'Cmajor7':  [0, 18],
 
     # C major seventh flat five
     'CM7b5':    [0, 19],
     'CΔ7b5':    [0, 19],
+    'Cmaj7b5':  [0, 19],
+    'Cmajor7b5':    [0, 19],
+    'CM7-5':    [0, 19],
+    'CΔ7-5':    [0, 19],
+    'Cmaj7-5':  [0, 19],
+    'Cmajor7-5':    [0, 19],
 
     # C minor-major seventh
-    'CmM7':     [0, 20],
-    'Cm#7':     [0, 20],
-    'C-M7':     [0, 20],
-    'C-Δ7':     [0, 20],
-    'Cminmaj7':     [0, 20],
-    'Cmin-maj7':    [0, 20],
+    'Cminormajor7':  [ 0, 20 ], 
+    'Cminormaj7':    [ 0, 20 ], 
+    'CminorM7':      [ 0, 20 ], 
+    'CminorΔ7':      [ 0, 20 ], 
+    'Cmmajor7':      [ 0, 20 ], 
+    'Cmmaj7':        [ 0, 20 ], 
+    'CmM7':          [ 0, 20 ], 
+    'CmΔ7':          [ 0, 20 ], 
+    'C-major7':      [ 0, 20 ], 
+    'C-maj7':        [ 0, 20 ], 
+    'C-M7':          [ 0, 20 ], 
+    'C-Δ7':          [ 0, 20 ], 
+    'Cminmajor7':    [ 0, 20 ], 
+    'Cminmaj7':      [ 0, 20 ], 
+    'CminM7':        [ 0, 20 ], 
+    'CminΔ7':        [ 0, 20 ], 
 
     # C minor seventh
     'Cm7':      [0, 21],
@@ -81,23 +101,44 @@ seventh_tests = {
 
     # C# dominant flat seventh
     'C#7b5':     [1, 17],
+    'C#7-5':     [1, 17],
+    'C#dom7b5':  [1, 17],
+    'C#dom7-5':  [1, 17],
 
     # C# major seventh
     'C#M7':      [1, 18],
     'C#maj7':    [1, 18],
     'C#Δ7':      [1, 18],
+    'C#major7':  [1, 18],
 
     # C# major seventh flat five
     'C#M7b5':    [1, 19],
     'C#Δ7b5':    [1, 19],
+    'C#maj7b5':  [1, 19],
+    'C#major7b5':    [1, 19],
+    'C#M7-5':    [1, 19],
+    'C#Δ7-5':    [1, 19],
+    'C#maj7-5':  [1, 19],
+    'C#major7-5':    [1, 19],
 
     # C# minor-major seventh
-    'C#mM7':     [1, 20],
-    'C#m#7':     [1, 20],
-    'C#-M7':     [1, 20],
-    'C#-Δ7':     [1, 20],
-    'C#minmaj7':     [1, 20],
-    'C#min-maj7':    [1, 20],
+    'C#minormajor7':  [ 1, 20 ], 
+    'C#minormaj7':    [ 1, 20 ], 
+    'C#minorM7':      [ 1, 20 ], 
+    'C#minorΔ7':      [ 1, 20 ], 
+    'C#mmajor7':      [ 1, 20 ], 
+    'C#mmaj7':        [ 1, 20 ], 
+    'C#mM7':          [ 1, 20 ], 
+    'C#mΔ7':          [ 1, 20 ], 
+    'C#-major7':      [ 1, 20 ], 
+    'C#-maj7':        [ 1, 20 ], 
+    'C#-M7':          [ 1, 20 ], 
+    'C#-Δ7':          [ 1, 20 ], 
+    'C#minmajor7':    [ 1, 20 ], 
+    'C#minmaj7':      [ 1, 20 ], 
+    'C#minM7':        [ 1, 20 ], 
+    'C#minΔ7':        [ 1, 20 ], 
+    'C#minΔ7':        [ 1, 20 ], 
 
     # C# minor seventh
     'C#m7':      [1, 21],
@@ -147,23 +188,43 @@ seventh_tests = {
 
     # Db dominant flat seventh
     'Db7b5':     [1, 17],
+    'Db7-5':     [1, 17],
+    'Dbdom7b5':  [1, 17],
+    'Dbdom7-5':  [1, 17],
 
     # Db major seventh
     'DbM7':      [1, 18],
     'Dbmaj7':    [1, 18],
     'DbΔ7':      [1, 18],
+    'Dbmajor7':  [1, 18],
 
     # Db major seventh flat five
     'DbM7b5':    [1, 19],
     'DbΔ7b5':    [1, 19],
+    'Dbmaj7b5':  [1, 19],
+    'Dbmajor7b5':    [1, 19],
+    'DbM7-5':    [1, 19],
+    'DbΔ7-5':    [1, 19],
+    'Dbmaj7-5':  [1, 19],
+    'Dbmajor7-5':    [1, 19],
 
     # Db minor-major seventh
-    'DbmM7':     [1, 20],
-    'Dbm#7':     [1, 20],
-    'Db-M7':     [1, 20],
-    'Db-Δ7':     [1, 20],
-    'Dbminmaj7':     [1, 20],
-    'Dbmin-maj7':    [1, 20],
+    'Dbminormajor7':  [ 1, 20 ], 
+    'Dbminormaj7':    [ 1, 20 ], 
+    'DbminorM7':      [ 1, 20 ], 
+    'DbminorΔ7':      [ 1, 20 ], 
+    'Dbmmajor7':      [ 1, 20 ], 
+    'Dbmmaj7':        [ 1, 20 ], 
+    'DbmM7':          [ 1, 20 ], 
+    'DbmΔ7':          [ 1, 20 ], 
+    'Db-major7':      [ 1, 20 ], 
+    'Db-maj7':        [ 1, 20 ], 
+    'Db-M7':          [ 1, 20 ], 
+    'Db-Δ7':          [ 1, 20 ], 
+    'Dbminmajor7':    [ 1, 20 ], 
+    'Dbminmaj7':      [ 1, 20 ], 
+    'DbminM7':        [ 1, 20 ], 
+    'DbminΔ7':        [ 1, 20 ], 
 
     # Db minor seventh
     'Dbm7':      [1, 21],
@@ -213,23 +274,43 @@ seventh_tests = {
 
     # D dominant flat seventh
     'D7b5':     [2, 17],
+    'D7-5':     [2, 17],
+    'Ddom7b5':  [2, 17],
+    'Ddom7-5':  [2, 17],
 
     # D major seventh
     'DM7':      [2, 18],
     'Dmaj7':    [2, 18],
     'DΔ7':      [2, 18],
+    'Dmajor7':  [2, 18],
 
     # D major seventh flat five
     'DM7b5':    [2, 19],
     'DΔ7b5':    [2, 19],
+    'Dmaj7b5':  [2, 19],
+    'Dmajor7b5':    [2, 19],
+    'DM7-5':    [2, 19],
+    'DΔ7-5':    [2, 19],
+    'Dmaj7-5':  [2, 19],
+    'Dmajor7-5':    [2, 19],
 
     # D minor-major seventh
-    'DmM7':     [2, 20],
-    'Dm#7':     [2, 20],
-    'D-M7':     [2, 20],
-    'D-Δ7':     [2, 20],
-    'Dminmaj7':     [2, 20],
-    'Dmin-maj7':    [2, 20],
+    'Dminormajor7':  [ 2, 20 ], 
+    'Dminormaj7':    [ 2, 20 ], 
+    'DminorM7':      [ 2, 20 ], 
+    'DminorΔ7':      [ 2, 20 ], 
+    'Dmmajor7':      [ 2, 20 ], 
+    'Dmmaj7':        [ 2, 20 ], 
+    'DmM7':          [ 2, 20 ], 
+    'DmΔ7':          [ 2, 20 ], 
+    'D-major7':      [ 2, 20 ], 
+    'D-maj7':        [ 2, 20 ], 
+    'D-M7':          [ 2, 20 ], 
+    'D-Δ7':          [ 2, 20 ], 
+    'Dminmajor7':    [ 2, 20 ], 
+    'Dminmaj7':      [ 2, 20 ], 
+    'DminM7':        [ 2, 20 ], 
+    'DminΔ7':        [ 2, 20 ], 
 
     # D minor seventh
     'Dm7':      [2, 21],
@@ -279,23 +360,43 @@ seventh_tests = {
 
     # D# dominant flat seventh
     'D#7b5':     [3, 17],
+    'D#7-5':     [3, 17],
+    'D#dom7b5':  [3, 17],
+    'D#dom7-5':  [3, 17],
 
     # D# major seventh
     'D#M7':      [3, 18],
     'D#maj7':    [3, 18],
     'D#Δ7':      [3, 18],
+    'D#major7':  [3, 18],
 
     # D# major seventh flat five
     'D#M7b5':    [3, 19],
     'D#Δ7b5':    [3, 19],
+    'D#maj7b5':  [3, 19],
+    'D#major7b5':    [3, 19],
+    'D#M7-5':    [3, 19],
+    'D#Δ7-5':    [3, 19],
+    'D#maj7-5':  [3, 19],
+    'D#major7-5':    [3, 19],
 
     # D# minor-major seventh
-    'D#mM7':     [3, 20],
-    'D#m#7':     [3, 20],
-    'D#-M7':     [3, 20],
-    'D#-Δ7':     [3, 20],
-    'D#minmaj7':     [3, 20],
-    'D#min-maj7':    [3, 20],
+    'D#minormajor7':  [ 3, 20 ], 
+    'D#minormaj7':    [ 3, 20 ], 
+    'D#minorM7':      [ 3, 20 ], 
+    'D#minorΔ7':      [ 3, 20 ], 
+    'D#mmajor7':      [ 3, 20 ], 
+    'D#mmaj7':        [ 3, 20 ], 
+    'D#mM7':          [ 3, 20 ], 
+    'D#mΔ7':          [ 3, 20 ], 
+    'D#-major7':      [ 3, 20 ], 
+    'D#-maj7':        [ 3, 20 ], 
+    'D#-M7':          [ 3, 20 ], 
+    'D#-Δ7':          [ 3, 20 ], 
+    'D#minmajor7':    [ 3, 20 ], 
+    'D#minmaj7':      [ 3, 20 ], 
+    'D#minM7':        [ 3, 20 ], 
+    'D#minΔ7':        [ 3, 20 ], 
 
     # D# minor seventh
     'D#m7':      [3, 21],
@@ -345,23 +446,43 @@ seventh_tests = {
 
     # Eb dominant flat seventh
     'Eb7b5':     [3, 17],
+    'Eb7-5':     [3, 17],
+    'Ebdom7b5':  [3, 17],
+    'Ebdom7-5':  [3, 17],
 
     # Eb major seventh
     'EbM7':      [3, 18],
     'Ebmaj7':    [3, 18],
     'EbΔ7':      [3, 18],
+    'Ebmajor7':  [3, 18],
 
     # Eb major seventh flat five
     'EbM7b5':    [3, 19],
     'EbΔ7b5':    [3, 19],
+    'Ebmaj7b5':  [3, 19],
+    'Ebmajor7b5':    [3, 19],
+    'EbM7-5':    [3, 19],
+    'EbΔ7-5':    [3, 19],
+    'Ebmaj7-5':  [3, 19],
+    'Ebmajor7-5':    [3, 19],
 
     # Eb minor-major seventh
-    'EbmM7':     [3, 20],
-    'Ebm#7':     [3, 20],
-    'Eb-M7':     [3, 20],
-    'Eb-Δ7':     [3, 20],
-    'Ebminmaj7':     [3, 20],
-    'Ebmin-maj7':    [3, 20],
+    'Ebminormajor7':  [ 3, 20 ], 
+    'Ebminormaj7':    [ 3, 20 ], 
+    'EbminorM7':      [ 3, 20 ], 
+    'EbminorΔ7':      [ 3, 20 ], 
+    'Ebmmajor7':      [ 3, 20 ], 
+    'Ebmmaj7':        [ 3, 20 ], 
+    'EbmM7':          [ 3, 20 ], 
+    'EbmΔ7':          [ 3, 20 ], 
+    'Eb-major7':      [ 3, 20 ], 
+    'Eb-maj7':        [ 3, 20 ], 
+    'Eb-M7':          [ 3, 20 ], 
+    'Eb-Δ7':          [ 3, 20 ], 
+    'Ebminmajor7':    [ 3, 20 ], 
+    'Ebminmaj7':      [ 3, 20 ], 
+    'EbminM7':        [ 3, 20 ], 
+    'EbminΔ7':        [ 3, 20 ], 
 
     # Eb minor seventh
     'Ebm7':      [3, 21],
@@ -411,23 +532,43 @@ seventh_tests = {
 
     # E dominant flat seventh
     'E7b5':     [4, 17],
+    'E7-5':     [4, 17],
+    'Edom7b5':  [4, 17],
+    'Edom7-5':  [4, 17],
 
     # E major seventh
     'EM7':      [4, 18],
     'Emaj7':    [4, 18],
     'EΔ7':      [4, 18],
+    'Emajor7':  [4, 18],
 
     # E major seventh flat five
     'EM7b5':    [4, 19],
     'EΔ7b5':    [4, 19],
+    'Emaj7b5':  [4, 19],
+    'Emajor7b5':    [4, 19],
+    'EM7-5':    [4, 19],
+    'EΔ7-5':    [4, 19],
+    'Emaj7-5':  [4, 19],
+    'Emajor7-5':    [4, 19],
 
     # E minor-major seventh
-    'EmM7':     [4, 20],
-    'Em#7':     [4, 20],
-    'E-M7':     [4, 20],
-    'E-Δ7':     [4, 20],
-    'Eminmaj7':     [4, 20],
-    'Emin-maj7':    [4, 20],
+    'Eminormajor7':  [ 4, 20 ], 
+    'Eminormaj7':    [ 4, 20 ], 
+    'EminorM7':      [ 4, 20 ], 
+    'EminorΔ7':      [ 4, 20 ], 
+    'Emmajor7':      [ 4, 20 ], 
+    'Emmaj7':        [ 4, 20 ], 
+    'EmM7':          [ 4, 20 ], 
+    'EmΔ7':          [ 4, 20 ], 
+    'E-major7':      [ 4, 20 ], 
+    'E-maj7':        [ 4, 20 ], 
+    'E-M7':          [ 4, 20 ], 
+    'E-Δ7':          [ 4, 20 ], 
+    'Eminmajor7':    [ 4, 20 ], 
+    'Eminmaj7':      [ 4, 20 ], 
+    'EminM7':        [ 4, 20 ], 
+    'EminΔ7':        [ 4, 20 ], 
 
     # E minor seventh
     'Em7':      [4, 21],
@@ -477,23 +618,43 @@ seventh_tests = {
 
     # F dominant flat seventh
     'F7b5':     [5, 17],
+    'F7-5':     [5, 17],
+    'Fdom7b5':  [5, 17],
+    'Fdom7-5':  [5, 17],
 
     # F major seventh
     'FM7':      [5, 18],
     'Fmaj7':    [5, 18],
     'FΔ7':      [5, 18],
+    'Fmajor7':  [5, 18],
 
     # F major seventh flat five
     'FM7b5':    [5, 19],
     'FΔ7b5':    [5, 19],
+    'Fmaj7b5':  [5, 19],
+    'Fmajor7b5':    [5, 19],
+    'FM7-5':    [5, 19],
+    'FΔ7-5':    [5, 19],
+    'Fmaj7-5':  [5, 19],
+    'Fmajor7-5':    [5, 19],
 
     # F minor-major seventh
-    'FmM7':     [5, 20],
-    'Fm#7':     [5, 20],
-    'F-M7':     [5, 20],
-    'F-Δ7':     [5, 20],
-    'Fminmaj7':     [5, 20],
-    'Fmin-maj7':    [5, 20],
+    'Fminormajor7':  [ 5, 20 ], 
+    'Fminormaj7':    [ 5, 20 ], 
+    'FminorM7':      [ 5, 20 ], 
+    'FminorΔ7':      [ 5, 20 ], 
+    'Fmmajor7':      [ 5, 20 ], 
+    'Fmmaj7':        [ 5, 20 ], 
+    'FmM7':          [ 5, 20 ], 
+    'FmΔ7':          [ 5, 20 ], 
+    'F-major7':      [ 5, 20 ], 
+    'F-maj7':        [ 5, 20 ], 
+    'F-M7':          [ 5, 20 ], 
+    'F-Δ7':          [ 5, 20 ], 
+    'Fminmajor7':    [ 5, 20 ], 
+    'Fminmaj7':      [ 5, 20 ], 
+    'FminM7':        [ 5, 20 ], 
+    'FminΔ7':        [ 5, 20 ], 
 
     # F minor seventh
     'Fm7':      [5, 21],
@@ -543,23 +704,43 @@ seventh_tests = {
 
     # F# dominant flat seventh
     'F#7b5':     [6, 17],
+    'F#7-5':     [6, 17],
+    'F#dom7b5':  [6, 17],
+    'F#dom7-5':  [6, 17],
 
     # F# major seventh
     'F#M7':      [6, 18],
     'F#maj7':    [6, 18],
     'F#Δ7':      [6, 18],
+    'F#major7':  [6, 18],
 
     # F# major seventh flat five
     'F#M7b5':    [6, 19],
     'F#Δ7b5':    [6, 19],
+    'F#maj7b5':  [6, 19],
+    'F#major7b5':    [6, 19],
+    'F#M7-5':    [6, 19],
+    'F#Δ7-5':    [6, 19],
+    'F#maj7-5':  [6, 19],
+    'F#major7-5':    [6, 19],
 
     # F# minor-major seventh
-    'F#mM7':     [6, 20],
-    'F#m#7':     [6, 20],
-    'F#-M7':     [6, 20],
-    'F#-Δ7':     [6, 20],
-    'F#minmaj7':     [6, 20],
-    'F#min-maj7':    [6, 20],
+    'F#minormajor7':  [ 6, 20 ], 
+    'F#minormaj7':    [ 6, 20 ], 
+    'F#minorM7':      [ 6, 20 ], 
+    'F#minorΔ7':      [ 6, 20 ], 
+    'F#mmajor7':      [ 6, 20 ], 
+    'F#mmaj7':        [ 6, 20 ], 
+    'F#mM7':          [ 6, 20 ], 
+    'F#mΔ7':          [ 6, 20 ], 
+    'F#-major7':      [ 6, 20 ], 
+    'F#-maj7':        [ 6, 20 ], 
+    'F#-M7':          [ 6, 20 ], 
+    'F#-Δ7':          [ 6, 20 ], 
+    'F#minmajor7':    [ 6, 20 ], 
+    'F#minmaj7':      [ 6, 20 ], 
+    'F#minM7':        [ 6, 20 ], 
+    'F#minΔ7':        [ 6, 20 ], 
 
     # F# minor seventh
     'F#m7':      [6, 21],
@@ -609,23 +790,43 @@ seventh_tests = {
 
     # Gb dominant flat seventh
     'Gb7b5':     [6, 17],
+    'Gb7-5':     [6, 17],
+    'Gbdom7b5':  [6, 17],
+    'Gbdom7-5':  [6, 17],
 
     # Gb major seventh
     'GbM7':      [6, 18],
     'Gbmaj7':    [6, 18],
     'GbΔ7':      [6, 18],
+    'Gbmajor7':  [6, 18],
 
     # Gb major seventh flat five
     'GbM7b5':    [6, 19],
     'GbΔ7b5':    [6, 19],
+    'Gbmaj7b5':  [6, 19],
+    'Gbmajor7b5':    [6, 19],
+    'GbM7-5':    [6, 19],
+    'GbΔ7-5':    [6, 19],
+    'Gbmaj7-5':  [6, 19],
+    'Gbmajor7-5':    [6, 19],
 
     # Gb minor-major seventh
-    'GbmM7':     [6, 20],
-    'Gbm#7':     [6, 20],
-    'Gb-M7':     [6, 20],
-    'Gb-Δ7':     [6, 20],
-    'Gbminmaj7':     [6, 20],
-    'Gbmin-maj7':    [6, 20],
+    'Gbminormajor7':  [ 6, 20 ], 
+    'Gbminormaj7':    [ 6, 20 ], 
+    'GbminorM7':      [ 6, 20 ], 
+    'GbminorΔ7':      [ 6, 20 ], 
+    'Gbmmajor7':      [ 6, 20 ], 
+    'Gbmmaj7':        [ 6, 20 ], 
+    'GbmM7':          [ 6, 20 ], 
+    'GbmΔ7':          [ 6, 20 ], 
+    'Gb-major7':      [ 6, 20 ], 
+    'Gb-maj7':        [ 6, 20 ], 
+    'Gb-M7':          [ 6, 20 ], 
+    'Gb-Δ7':          [ 6, 20 ], 
+    'Gbminmajor7':    [ 6, 20 ], 
+    'Gbminmaj7':      [ 6, 20 ], 
+    'GbminM7':        [ 6, 20 ], 
+    'GbminΔ7':        [ 6, 20 ], 
 
     # Gb minor seventh
     'Gbm7':      [6, 21],
@@ -675,23 +876,43 @@ seventh_tests = {
 
     # G dominant flat seventh
     'G7b5':     [7, 17],
+    'G7-5':     [7, 17],
+    'Gdom7b5':  [7, 17],
+    'Gdom7-5':  [7, 17],
 
     # G major seventh
     'GM7':      [7, 18],
     'Gmaj7':    [7, 18],
     'GΔ7':      [7, 18],
+    'Gmajor7':  [7, 18],
 
     # G major seventh flat five
     'GM7b5':    [7, 19],
     'GΔ7b5':    [7, 19],
+    'Gmaj7b5':  [7, 19],
+    'Gmajor7b5':    [7, 19],
+    'GM7-5':    [7, 19],
+    'GΔ7-5':    [7, 19],
+    'Gmaj7-5':  [7, 19],
+    'Gmajor7-5':    [7, 19],
 
     # G minor-major seventh
-    'GmM7':     [7, 20],
-    'Gm#7':     [7, 20],
-    'G-M7':     [7, 20],
-    'G-Δ7':     [7, 20],
-    'Gminmaj7':     [7, 20],
-    'Gmin-maj7':    [7, 20],
+    'Gminormajor7':  [ 7, 20 ], 
+    'Gminormaj7':    [ 7, 20 ], 
+    'GminorM7':      [ 7, 20 ], 
+    'GminorΔ7':      [ 7, 20 ], 
+    'Gmmajor7':      [ 7, 20 ], 
+    'Gmmaj7':        [ 7, 20 ], 
+    'GmM7':          [ 7, 20 ], 
+    'GmΔ7':          [ 7, 20 ], 
+    'G-major7':      [ 7, 20 ], 
+    'G-maj7':        [ 7, 20 ], 
+    'G-M7':          [ 7, 20 ], 
+    'G-Δ7':          [ 7, 20 ], 
+    'Gminmajor7':    [ 7, 20 ], 
+    'Gminmaj7':      [ 7, 20 ], 
+    'GminM7':        [ 7, 20 ], 
+    'GminΔ7':        [ 7, 20 ], 
 
     # G minor seventh
     'Gm7':      [7, 21],
@@ -741,23 +962,43 @@ seventh_tests = {
 
     # G# dominant flat seventh
     'G#7b5':     [8, 17],
+    'G#7-5':     [8, 17],
+    'G#dom7b5':  [8, 17],
+    'G#dom7-5':  [8, 17],
 
     # G# major seventh
     'G#M7':      [8, 18],
     'G#maj7':    [8, 18],
     'G#Δ7':      [8, 18],
+    'G#major7':  [8, 18],
 
     # G# major seventh flat five
     'G#M7b5':    [8, 19],
     'G#Δ7b5':    [8, 19],
+    'G#maj7b5':  [8, 19],
+    'G#major7b5':    [8, 19],
+    'G#M7-5':    [8, 19],
+    'G#Δ7-5':    [8, 19],
+    'G#maj7-5':  [8, 19],
+    'G#major7-5':    [8, 19],
 
     # G# minor-major seventh
-    'G#mM7':     [8, 20],
-    'G#m#7':     [8, 20],
-    'G#-M7':     [8, 20],
-    'G#-Δ7':     [8, 20],
-    'G#minmaj7':     [8, 20],
-    'G#min-maj7':    [8, 20],
+    'G#minormajor7':  [ 8, 20 ], 
+    'G#minormaj7':    [ 8, 20 ], 
+    'G#minorM7':      [ 8, 20 ], 
+    'G#minorΔ7':      [ 8, 20 ], 
+    'G#mmajor7':      [ 8, 20 ], 
+    'G#mmaj7':        [ 8, 20 ], 
+    'G#mM7':          [ 8, 20 ], 
+    'G#mΔ7':          [ 8, 20 ], 
+    'G#-major7':      [ 8, 20 ], 
+    'G#-maj7':        [ 8, 20 ], 
+    'G#-M7':          [ 8, 20 ], 
+    'G#-Δ7':          [ 8, 20 ], 
+    'G#minmajor7':    [ 8, 20 ], 
+    'G#minmaj7':      [ 8, 20 ], 
+    'G#minM7':        [ 8, 20 ], 
+    'G#minΔ7':        [ 8, 20 ], 
 
     # G# minor seventh
     'G#m7':      [8, 21],
@@ -807,23 +1048,43 @@ seventh_tests = {
 
     # Ab dominant flat seventh
     'Ab7b5':     [8, 17],
+    'Ab7-5':     [8, 17],
+    'Abdom7b5':  [8, 17],
+    'Abdom7-5':  [8, 17],
 
     # Ab major seventh
     'AbM7':      [8, 18],
     'Abmaj7':    [8, 18],
     'AbΔ7':      [8, 18],
+    'Abmajor7':  [8, 18],
 
     # Ab major seventh flat five
     'AbM7b5':    [8, 19],
     'AbΔ7b5':    [8, 19],
+    'Abmaj7b5':  [8, 19],
+    'Abmajor7b5':    [8, 19],
+    'AbM7-5':    [8, 19],
+    'AbΔ7-5':    [8, 19],
+    'Abmaj7-5':  [8, 19],
+    'Abmajor7-5':    [8, 19],
 
     # Ab minor-major seventh
-    'AbmM7':     [8, 20],
-    'Abm#7':     [8, 20],
-    'Ab-M7':     [8, 20],
-    'Ab-Δ7':     [8, 20],
-    'Abminmaj7':     [8, 20],
-    'Abmin-maj7':    [8, 20],
+    'Abminormajor7':  [ 8, 20 ], 
+    'Abminormaj7':    [ 8, 20 ], 
+    'AbminorM7':      [ 8, 20 ], 
+    'AbminorΔ7':      [ 8, 20 ], 
+    'Abmmajor7':      [ 8, 20 ], 
+    'Abmmaj7':        [ 8, 20 ], 
+    'AbmM7':          [ 8, 20 ], 
+    'AbmΔ7':          [ 8, 20 ], 
+    'Ab-major7':      [ 8, 20 ], 
+    'Ab-maj7':        [ 8, 20 ], 
+    'Ab-M7':          [ 8, 20 ], 
+    'Ab-Δ7':          [ 8, 20 ], 
+    'Abminmajor7':    [ 8, 20 ], 
+    'Abminmaj7':      [ 8, 20 ], 
+    'AbminM7':        [ 8, 20 ], 
+    'AbminΔ7':        [ 8, 20 ], 
 
     # Ab minor seventh
     'Abm7':      [8, 21],
@@ -873,23 +1134,43 @@ seventh_tests = {
 
     # A dominant flat seventh
     'A7b5':     [9, 17],
+    'A7-5':     [9, 17],
+    'Adom7b5':  [9, 17],
+    'Adom7-5':  [9, 17],
 
     # A major seventh
     'AM7':      [9, 18],
     'Amaj7':    [9, 18],
     'AΔ7':      [9, 18],
+    'Amajor7':  [9, 18],
 
     # A major seventh flat five
     'AM7b5':    [9, 19],
     'AΔ7b5':    [9, 19],
+    'Amaj7b5':  [9, 19],
+    'Amajor7b5':    [9, 19],
+    'AM7-5':    [9, 19],
+    'AΔ7-5':    [9, 19],
+    'Amaj7-5':  [9, 19],
+    'Amajor7-5':    [9, 19],
 
     # A minor-major seventh
-    'AmM7':     [9, 20],
-    'Am#7':     [9, 20],
-    'A-M7':     [9, 20],
-    'A-Δ7':     [9, 20],
-    'Aminmaj7':     [9, 20],
-    'Amin-maj7':    [9, 20],
+    'Aminormajor7':  [ 9, 20 ], 
+    'Aminormaj7':    [ 9, 20 ], 
+    'AminorM7':      [ 9, 20 ], 
+    'AminorΔ7':      [ 9, 20 ], 
+    'Ammajor7':      [ 9, 20 ], 
+    'Ammaj7':        [ 9, 20 ], 
+    'AmM7':          [ 9, 20 ], 
+    'AmΔ7':          [ 9, 20 ], 
+    'A-major7':      [ 9, 20 ], 
+    'A-maj7':        [ 9, 20 ], 
+    'A-M7':          [ 9, 20 ], 
+    'A-Δ7':          [ 9, 20 ], 
+    'Aminmajor7':    [ 9, 20 ], 
+    'Aminmaj7':      [ 9, 20 ], 
+    'AminM7':        [ 9, 20 ], 
+    'AminΔ7':        [ 9, 20 ], 
 
     # A minor seventh
     'Am7':      [9, 21],
@@ -939,23 +1220,43 @@ seventh_tests = {
 
     # A# dominant flat seventh
     'A#7b5':     [10, 17],
+    'A#7-5':     [10, 17],
+    'A#dom7b5':  [10, 17],
+    'A#dom7-5':  [10, 17],
 
     # A# major seventh
     'A#M7':      [10, 18],
     'A#maj7':    [10, 18],
     'A#Δ7':      [10, 18],
+    'A#major7':  [10, 18],
 
     # A# major seventh flat five
     'A#M7b5':    [10, 19],
     'A#Δ7b5':    [10, 19],
+    'A#maj7b5':  [10, 19],
+    'A#major7b5':    [10, 19],
+    'A#M7-5':    [10, 19],
+    'A#Δ7-5':    [10, 19],
+    'A#maj7-5':  [10, 19],
+    'A#major7-5':    [10, 19],
 
     # A# minor-major seventh
-    'A#mM7':     [10, 20],
-    'A#m#7':     [10, 20],
-    'A#-M7':     [10, 20],
-    'A#-Δ7':     [10, 20],
-    'A#minmaj7':     [10, 20],
-    'A#min-maj7':    [10, 20],
+    'A#minormajor7':  [ 10, 20 ], 
+    'A#minormaj7':    [ 10, 20 ], 
+    'A#minorM7':      [ 10, 20 ], 
+    'A#minorΔ7':      [ 10, 20 ], 
+    'A#mmajor7':      [ 10, 20 ], 
+    'A#mmaj7':        [ 10, 20 ], 
+    'A#mM7':          [ 10, 20 ], 
+    'A#mΔ7':          [ 10, 20 ], 
+    'A#-major7':      [ 10, 20 ], 
+    'A#-maj7':        [ 10, 20 ], 
+    'A#-M7':          [ 10, 20 ], 
+    'A#-Δ7':          [ 10, 20 ], 
+    'A#minmajor7':    [ 10, 20 ], 
+    'A#minmaj7':      [ 10, 20 ], 
+    'A#minM7':        [ 10, 20 ], 
+    'A#minΔ7':        [ 10, 20 ], 
 
     # A# minor seventh
     'A#m7':      [10, 21],
@@ -1005,23 +1306,43 @@ seventh_tests = {
 
     # Bb dominant flat seventh
     'Bb7b5':     [10, 17],
+    'Bb7-5':     [10, 17],
+    'Bbdom7b5':  [10, 17],
+    'Bbdom7-5':  [10, 17],
 
     # Bb major seventh
     'BbM7':      [10, 18],
     'Bbmaj7':    [10, 18],
     'BbΔ7':      [10, 18],
+    'Bbmajor7':  [10, 18],
 
     # Bb major seventh flat five
     'BbM7b5':    [10, 19],
     'BbΔ7b5':    [10, 19],
+    'Bbmaj7b5':  [10, 19],
+    'Bbmajor7b5':    [10, 19],
+    'BbM7-5':    [10, 19],
+    'BbΔ7-5':    [10, 19],
+    'Bbmaj7-5':  [10, 19],
+    'Bbmajor7-5':    [10, 19],
 
     # Bb minor-major seventh
-    'BbmM7':     [10, 20],
-    'Bbm#7':     [10, 20],
-    'Bb-M7':     [10, 20],
-    'Bb-Δ7':     [10, 20],
-    'Bbminmaj7':     [10, 20],
-    'Bbmin-maj7':    [10, 20],
+    'Bbminormajor7':  [ 10, 20 ], 
+    'Bbminormaj7':    [ 10, 20 ], 
+    'BbminorM7':      [ 10, 20 ], 
+    'BbminorΔ7':      [ 10, 20 ], 
+    'Bbmmajor7':      [ 10, 20 ], 
+    'Bbmmaj7':        [ 10, 20 ], 
+    'BbmM7':          [ 10, 20 ], 
+    'BbmΔ7':          [ 10, 20 ], 
+    'Bb-major7':      [ 10, 20 ], 
+    'Bb-maj7':        [ 10, 20 ], 
+    'Bb-M7':          [ 10, 20 ], 
+    'Bb-Δ7':          [ 10, 20 ], 
+    'Bbminmajor7':    [ 10, 20 ], 
+    'Bbminmaj7':      [ 10, 20 ], 
+    'BbminM7':        [ 10, 20 ], 
+    'BbminΔ7':        [ 10, 20 ], 
 
     # Bb minor seventh
     'Bbm7':      [10, 21],
@@ -1071,23 +1392,43 @@ seventh_tests = {
 
     # B dominant flat seventh
     'B7b5':     [11, 17],
+    'B7-5':     [11, 17],
+    'Bdom7b5':  [11, 17],
+    'Bdom7-5':  [11, 17],
 
     # B major seventh
     'BM7':      [11, 18],
     'Bmaj7':    [11, 18],
     'BΔ7':      [11, 18],
+    'Bmajor7':  [11, 18],
 
     # B major seventh flat five
     'BM7b5':    [11, 19],
     'BΔ7b5':    [11, 19],
+    'Bmaj7b5':  [11, 19],
+    'Bmajor7b5':    [11, 19],
+    'BM7-5':    [11, 19],
+    'BΔ7-5':    [11, 19],
+    'Bmaj7-5':  [11, 19],
+    'Bmajor7-5':    [11, 19],
 
     # B minor-major seventh
-    'BmM7':     [11, 20],
-    'Bm#7':     [11, 20],
-    'B-M7':     [11, 20],
-    'B-Δ7':     [11, 20],
-    'Bminmaj7':     [11, 20],
-    'Bmin-maj7':    [11, 20],
+    'Bminormajor7':  [ 11, 20 ], 
+    'Bminormaj7':    [ 11, 20 ], 
+    'BminorM7':      [ 11, 20 ], 
+    'BminorΔ7':      [ 11, 20 ], 
+    'Bmmajor7':      [ 11, 20 ], 
+    'Bmmaj7':        [ 11, 20 ], 
+    'BmM7':          [ 11, 20 ], 
+    'BmΔ7':          [ 11, 20 ], 
+    'B-major7':      [ 11, 20 ], 
+    'B-maj7':        [ 11, 20 ], 
+    'B-M7':          [ 11, 20 ], 
+    'B-Δ7':          [ 11, 20 ], 
+    'Bminmajor7':    [ 11, 20 ], 
+    'Bminmaj7':      [ 11, 20 ], 
+    'BminM7':        [ 11, 20 ], 
+    'BminΔ7':        [ 11, 20 ], 
 
     # B minor seventh
     'Bm7':      [11, 21],

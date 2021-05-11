@@ -31,7 +31,6 @@ class ParserTester:
                 sys.exit(0)
             count += 1
         print ("%i/%i tests completed successfully!" % (count, total_tests))
-        print ('--------------------------------')
 
 
         # --------------------------------
@@ -51,7 +50,6 @@ class ParserTester:
                 sys.exit(0)
             count += 1
         print ("%i/%i tests completed successfully!" % (count, total_tests))
-        print ('--------------------------------')
 
 
         # --------------------------------
@@ -71,7 +69,6 @@ class ParserTester:
                 sys.exit(0)
             count += 1
         print ("%i/%i tests completed successfully!" % (count, total_tests))
-        print ('--------------------------------')
 
 
         # --------------------------------
@@ -92,6 +89,7 @@ class ParserTester:
                 sys.exit(0)
             count += 1
         print ("%i/%i tests completed successfully!" % (count, total_tests))
-        print ('--------------------------------')
 
+        
+        print ('--------------------------------')
         sys.exit(0)

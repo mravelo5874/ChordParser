@@ -18,6 +18,8 @@ def main():
     while (True):
         user_input = input("\nEnter a chord: ")
         user_input = user_input.replace(' ', '') # remove all spaces
+        user_input = user_input.replace('(', '') # remove all '('
+        user_input = user_input.replace(')', '') # remove all ')'
         print('') # print extra line
 
         if (user_input == "exit"):
